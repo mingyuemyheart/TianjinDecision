@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_3DMap_V4.0.1_20160923.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1c2f0300aa931afaee1392e8bcac9fa878995cbd">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/AMap_3DMap_V4.0.1_20160923_0bf76fd5b7cbfd63868ac7191f22a38da4a8ca78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_sms.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2ad6c3574746f87ea8416bbd89b0f6ae0aa0eee0">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_sms_e3b731393fe53226d4ebe74e64e4336e7c246764/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d644a1997c263b182848e2c1f979ae6389deb02/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d22de9aff2febcfe22fe00dbf2aa71aa36e872f9">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_umengwx_60d8524468d0858bf2ceb60da1d2475b01a3fcca.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengqq.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="076b05242bee3ea5e650c0dc23ecff4578b7f351">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_umengqq_89d471bc1e2cc97271909c421ea8f46b695543db/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengqq.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="076b05242bee3ea5e650c0dc23ecff4578b7f351">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_umengqq_89d471bc1e2cc97271909c421ea8f46b695543db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okhttp-3.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d060ca3190df0eda4dc13415532a12e15ca5f11">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/okhttp-3.8.1_1f2b27c7110e7eb7a2cd93fbaa5269e114d16df8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okhttp-3.8.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d060ca3190df0eda4dc13415532a12e15ca5f11">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/okhttp-3.8.1_1f2b27c7110e7eb7a2cd93fbaa5269e114d16df8/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_3DMap_V4.0.1_20160923.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1c2f0300aa931afaee1392e8bcac9fa878995cbd">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/AMap_3DMap_V4.0.1_20160923_0bf76fd5b7cbfd63868ac7191f22a38da4a8ca78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_sms.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2ad6c3574746f87ea8416bbd89b0f6ae0aa0eee0">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_sms_e3b731393fe53226d4ebe74e64e4336e7c246764.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d22de9aff2febcfe22fe00dbf2aa71aa36e872f9">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_umengwx_60d8524468d0858bf2ceb60da1d2475b01a3fcca/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_WeiXin_2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="13e37ce9567f5843ccf199ccfd958374b819c9a3">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_WeiXin_2_d2c2a07522cf791cfb65e67c50c705898fc0a8d1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1559c24d546f6c9dce925eade88cd4b3cb4103ff">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b37437c17d26559cd921c5b7b3762ec0d14ebefc/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a6e54a22629e98f8e1d4b4e6a5fa8798c0eff574">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/ChinaWeatherAPI_4915de6b708b57da3e4356f3dd09854de16a5a58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_viewv6.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a4d92ff8610d7f19521f62b06f858597484b921b">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/umeng_social_viewv6.0.0_ff05bb0a2edddeb8124fe969d26a8b6f1622eab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_netv6.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4dcc3987dc1d0aab2a1ce2fd3ea8173907407ad7">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/umeng_social_netv6.0.0_222e2bffa4de2c98ac82c8eedaf3b7d79125cf9c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_viewv6.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a4d92ff8610d7f19521f62b06f858597484b921b">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/umeng_social_viewv6.0.0_ff05bb0a2edddeb8124fe969d26a8b6f1622eab5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_WeiXin_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="13e37ce9567f5843ccf199ccfd958374b819c9a3">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_WeiXin_2_d2c2a07522cf791cfb65e67c50c705898fc0a8d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_QQZone_3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6e0bd4ab10727ba7e1738bdd6eacedb3bdf584d9">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_QQZone_3_266b4eac648b80fcea6e9d37bb3e248d24691ab7/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_QQZone_3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6e0bd4ab10727ba7e1738bdd6eacedb3bdf584d9">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_QQZone_3_266b4eac648b80fcea6e9d37bb3e248d24691ab7.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_netv6.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4dcc3987dc1d0aab2a1ce2fd3ea8173907407ad7">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/umeng_social_netv6.0.0_222e2bffa4de2c98ac82c8eedaf3b7d79125cf9c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a6e54a22629e98f8e1d4b4e6a5fa8798c0eff574">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/ChinaWeatherAPI_4915de6b708b57da3e4356f3dd09854de16a5a58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_Location_V2.4.0_20160308.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd8aedb3d0d87b92777ab997ec883427d88f379a">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/AMap_Location_V2.4.0_20160308_9f1161f26935f7231395856e47a4fcb26c0a0dfd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/okio-1.13.0_1540b505f383e6470fe2fcc73c24589196e036b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/httpmime-4.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e70d34d98f7f7f3b2b92105b9f2fe2a7a7184461">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpmime-4.1.3_9eb2a73e922b941b4efc135e2e5b78c89c1f24ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_Location_V2.4.0_20160308.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd8aedb3d0d87b92777ab997ec883427d88f379a">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/AMap_Location_V2.4.0_20160308_9f1161f26935f7231395856e47a4fcb26c0a0dfd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/okio-1.13.0_1540b505f383e6470fe2fcc73c24589196e036b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/httpmime-4.1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e70d34d98f7f7f3b2b92105b9f2fe2a7a7184461">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/httpmime-4.1.3_9eb2a73e922b941b4efc135e2e5b78c89c1f24ea.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_apiv6.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5361f960e3f4882962e2a333e5d6df0bc226fd93">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/umeng_social_apiv6.0.0_97a1c1d27f6bcffeace6c050e3e38654dcb340a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/MapApiServices.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e84628aa8eea7b9892768f19c41dbe02abc7f666">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/MapApiServices_f19b9efbe07dedb91fc6f6703d3326d35368f3d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_apiv6.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5361f960e3f4882962e2a333e5d6df0bc226fd93">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/umeng_social_apiv6.0.0_97a1c1d27f6bcffeace6c050e3e38654dcb340a7.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/MapApiServices.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e84628aa8eea7b9892768f19c41dbe02abc7f666">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/MapApiServices_f19b9efbe07dedb91fc6f6703d3326d35368f3d8/classes.dex" />
+    </item>
+
+</items>
