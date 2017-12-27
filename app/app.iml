@@ -22,7 +22,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
     <exclude-output />
@@ -104,31 +104,31 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="ChinaWeatherAPI" level="project" />
-    <orderEntry type="library" exported="" name="umeng_social_netv6.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-core-ui-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="AMap_3DMap_V4.0.1_20160923" level="project" />
-    <orderEntry type="library" exported="" name="SocialSDK_WeiXin_2" level="project" />
-    <orderEntry type="library" exported="" name="SocialSDK_QQZone_3" level="project" />
-    <orderEntry type="library" exported="" name="MapApiServices" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-fragment-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="httpmime-4.1.3" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
-    <orderEntry type="library" exported="" name="umeng_social_apiv6.0.0" level="project" />
-    <orderEntry type="library" exported="" name="SocialSDK_umengwx" level="project" />
-    <orderEntry type="library" exported="" name="SocialSDK_umengqq" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-3.8.1" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-compat-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="umeng_social_viewv6.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="AMap_Location_V2.4.0_20160308" level="project" />
-    <orderEntry type="library" exported="" name="SocialSDK_sms" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="animated-vector-drawable-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/httpmime-4.1.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okhttp-3.8.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_Location_V2.4.0_20160308.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-ui-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-media-compat-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_QQZone_3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_sms.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-fragment-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_WeiXin_2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_viewv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-utils-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_3DMap_V4.0.1_20160923.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:25.1.1@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_netv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-compat-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_apiv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengqq.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/MapApiServices.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okio-1.13.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-25.1.1" level="project" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
   </component>
 </module>

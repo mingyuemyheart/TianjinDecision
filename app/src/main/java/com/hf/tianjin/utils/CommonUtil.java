@@ -60,7 +60,7 @@ public class CommonUtil {
      */  
     public static float dip2px(Context context, float dpValue) {  
         final float scale = context.getResources().getDisplayMetrics().density;  
-        return (float) (dpValue * scale);  
+        return dpValue * scale;
     }  
   
     /** 
@@ -68,7 +68,7 @@ public class CommonUtil {
      */  
     public static float px2dip(Context context, float pxValue) {  
         final float scale = context.getResources().getDisplayMetrics().density;  
-        return (float) (pxValue / scale);  
+        return pxValue / scale;
     } 
     
     /**
@@ -98,7 +98,6 @@ public class CommonUtil {
 	/**
 	 * 解决ScrollView与GridView共存的问题
 	 * 
-	 * @param listView
 	 */
 	public static void setGridViewHeightBasedOnChildren(GridView gridView) {
 		ListAdapter listAdapter = gridView.getAdapter();
@@ -374,7 +373,6 @@ public class CommonUtil {
 	
 	/**
 	 * 转换图片成六边形
-	 * @param scaleBitmapImage
 	 * @return
 	 */
 	public static Bitmap getHexagonShape(Bitmap bitmap) {
@@ -605,8 +603,6 @@ public class CommonUtil {
     
 	/**
      * 截屏,可是区域
-     * @param shotView 截屏view
-     * @param id view id
      * @return
      */
 	public static Bitmap captureView(View view) {
@@ -712,7 +708,7 @@ public class CommonUtil {
 		if (TextUtils.equals(product, "octopus_unilite") && TextUtils.equals(model, "3Q-M185-V1.2")) {
 			flag = true;
 		}
-		return flag;
+		return true;
 	}
     
 }

@@ -1076,7 +1076,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 							WeeklyView weeklyView = new WeeklyView(mContext);
 							weeklyView.setData(weeklyList);
 							llContainer2.removeAllViews();
-							llContainer2.addView(weeklyView, (int)(CommonUtil.dip2px(mContext, width*2/density)), (int)(CommonUtil.dip2px(mContext, 400)));
+							llContainer2.addView(weeklyView, width*2, (int)(CommonUtil.dip2px(mContext, 400)));
 						}
 					}
 					
@@ -1098,7 +1098,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 						cubicView = new CubicView(mContext);
 						cubicView.setData(hourlyList, width);
 						llContainer1.removeAllViews();
-						llContainer1.addView(cubicView, (int)(CommonUtil.dip2px(mContext, width*2/density)), (int)(CommonUtil.dip2px(mContext, 200)));
+						llContainer1.addView(cubicView, width*2, (int)(CommonUtil.dip2px(mContext, 300)));
 					}
 				} catch (JSONException e1) {
 					e1.printStackTrace();
@@ -1394,7 +1394,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 							WeeklyView weeklyView = new WeeklyView(mContext);
 							weeklyView.setData(weeklyList);
 							llContainer2.removeAllViews();
-							llContainer2.addView(weeklyView, (int)(CommonUtil.dip2px(mContext, width*2/density)), (int)(CommonUtil.dip2px(mContext, 400)));
+							llContainer2.addView(weeklyView, width*2, (int)(CommonUtil.dip2px(mContext, 400)));
 						} catch (JSONException e) {
 							e.printStackTrace();
 						} catch (NullPointerException e) {
@@ -1421,7 +1421,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 							cubicView = new CubicView(mContext);
 							cubicView.setData(hourlyList, width);
 							llContainer1.removeAllViews();
-							llContainer1.addView(cubicView, (int)(CommonUtil.dip2px(mContext, width*2/density)), (int)(CommonUtil.dip2px(mContext, 200)));
+							llContainer1.addView(cubicView, width*2, (int)(CommonUtil.dip2px(mContext, 300)));
 						} catch (JSONException e) {
 							e.printStackTrace();
 						} catch (NullPointerException e) {

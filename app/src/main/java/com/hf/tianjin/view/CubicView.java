@@ -37,7 +37,7 @@ public class CubicView extends View{
 	private SimpleDateFormat sdf0 = new SimpleDateFormat("yyyyMMddHHmm");
 	private SimpleDateFormat sdf1 = new SimpleDateFormat("HH时");
 	private SimpleDateFormat sdf2 = new SimpleDateFormat("HH");
-	private List<WeatherDto> tempList = new ArrayList<WeatherDto>();
+	private List<WeatherDto> tempList = new ArrayList<>();
 	private int maxTemp = 0;//最高温度
 	private int minTemp = 0;//最低温度
 	private int averTemp = 0;
@@ -49,6 +49,8 @@ public class CubicView extends View{
 	private int hScrollViewWidth = 0;
 	private Bitmap bitmap = null;
 	private Bitmap bitmap2 = null;
+	private int totalDivider = 0;
+	private int itemDivider = 1;
 	
 	public CubicView(Context context) {
 		super(context);
@@ -102,29 +104,27 @@ public class CubicView extends View{
 					minTemp = tempList.get(i).hourlyTemp;
 				}
 			}
-			
-			int totalDivider = 0;
+
 			if (maxTemp > 0 && minTemp > 0) {
-				totalDivider = (int) (maxTemp-minTemp);
+				totalDivider = maxTemp-minTemp;
 			}else if (maxTemp >= 0 && minTemp <= 0) {
-				totalDivider = (int) (maxTemp-minTemp);
+				totalDivider = maxTemp-minTemp;
 			}else if (maxTemp < 0 && minTemp < 0) {
-				totalDivider = (int) (minTemp-maxTemp);
+				totalDivider = maxTemp-minTemp;
 			}
-			int itemDivider = 1;
 			if (totalDivider <= 5) {
 				itemDivider = 1;
-			}else if (totalDivider > 5 && totalDivider <= 10) {
+			}else if (totalDivider > 5 && totalDivider <= 15) {
 				itemDivider = 2;
-			}else if (totalDivider > 10 && totalDivider <= 20) {
+			}else if (totalDivider > 15 && totalDivider <= 25) {
+				itemDivider = 3;
+			}else if (totalDivider > 25 && totalDivider <= 40) {
 				itemDivider = 4;
-			}else if (totalDivider > 20 && totalDivider <= 40) {
-				itemDivider = 8;
-			}else if (totalDivider > 40) {
-				itemDivider = 10;
+			}else {
+				itemDivider = 5;
 			}
-			maxTemp = maxTemp+itemDivider;
-			minTemp = minTemp-itemDivider/2;
+			maxTemp = maxTemp+itemDivider*3/2;
+			minTemp = minTemp-itemDivider;
 			averTemp = (maxTemp + minTemp)/2;
 			
 			hourlyCode = tempList.get(0).hourlyCode;
@@ -142,7 +142,7 @@ public class CubicView extends View{
 		float h = canvas.getHeight();
 		canvas.drawColor(Color.TRANSPARENT);
 		float chartW = w-CommonUtil.dip2px(mContext, 80);
-		float chartH = h-CommonUtil.dip2px(mContext, 85);
+		float chartH = h-CommonUtil.dip2px(mContext, 120);
 		float leftMargin = CommonUtil.dip2px(mContext, 40);
 		float rightMargin = CommonUtil.dip2px(mContext, 40);
 		float topMargin = CommonUtil.dip2px(mContext, 0);
@@ -153,55 +153,21 @@ public class CubicView extends View{
 		for (int i = 0; i < size; i++) {
 			WeatherDto dto = tempList.get(i);
 			dto.x = (chartW/(size-1))*i + leftMargin;
-			
-			float temp = tempList.get(i).hourlyTemp;
-			if (maxTemp > 0 && minTemp > 0) {
-				dto.y = chartH - chartH*(temp-minTemp)/(maxTemp-minTemp) - topMargin;
-			}else if (maxTemp >= 0 && minTemp <= 0) {
-				dto.y = chartH - chartH*temp/(maxTemp-minTemp) - topMargin;
-			}else if (maxTemp < 0 && minTemp < 0) {
-				dto.y = chartH*(temp-maxTemp)/(minTemp-maxTemp) - topMargin;
-			}
+
+			float temp = dto.hourlyTemp;
+			dto.y = chartH*Math.abs(maxTemp-temp)/totalDivider;
+			Log.e("temp", temp+"---"+dto.y);
 			tempList.set(i, dto);
 		}
-		
+
 		//绘制刻度线
-		int totalDivider = 0;
-		if (maxTemp > 0 && minTemp > 0) {
-			totalDivider = (int) (maxTemp-minTemp);
-		}else if (maxTemp >= 0 && minTemp <= 0) {
-			totalDivider = (int) (maxTemp-minTemp);
-		}else if (maxTemp < 0 && minTemp < 0) {
-			totalDivider = (int) (minTemp-maxTemp);
-		}
-		int itemDivider = 1;
-		if (totalDivider <= 5) {
-			itemDivider = 1;
-		}else if (totalDivider > 5 && totalDivider <= 10) {
-			itemDivider = 2;
-		}else if (totalDivider > 10 && totalDivider <= 20) {
-			itemDivider = 4;
-		}else if (totalDivider > 20 && totalDivider <= 40) {
-			itemDivider = 8;
-		}else if (totalDivider > 40) {
-			itemDivider = 10;
-		}
-		
 		for (int i = minTemp; i <= maxTemp; i+=itemDivider) {
-			float dividerY = 0;
-			int value = i;
-			if (maxTemp > 0 && minTemp > 0) {
-				dividerY = chartH - chartH*(value-minTemp)/(maxTemp-minTemp) - topMargin;
-			}else if (maxTemp >= 0 && minTemp <= 0) {
-				dividerY = chartH - chartH*value/(maxTemp-minTemp) - topMargin;
-			}else if (maxTemp < 0 && minTemp < 0) {
-				dividerY = chartH*(value-maxTemp)/(minTemp-maxTemp) - topMargin;
-			}
+			float dividerY = chartH*Math.abs(maxTemp-i)/totalDivider;
 			lineP.setColor(0x30ffffff);
 			canvas.drawLine(CommonUtil.dip2px(mContext, 25), dividerY, w-rightMargin, dividerY, lineP);
 			textP.setColor(mContext.getResources().getColor(R.color.white));
 			textP.setTextSize(CommonUtil.dip2px(mContext, 10));
-			canvas.drawText(String.valueOf(i)+mContext.getString(R.string.unit_degree), CommonUtil.dip2px(mContext, 5), dividerY, textP);
+			canvas.drawText(String.valueOf(i)+"℃", CommonUtil.dip2px(mContext, 5), dividerY, textP);
 		}
 		
 		for (int i = 0; i < size-1; i++) {

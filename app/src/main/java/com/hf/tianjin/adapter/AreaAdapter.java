@@ -65,17 +65,17 @@ public class AreaAdapter extends BaseAdapter{
 		
 		CityDto dto = mArrayList.get(position);
 		mHolder.tvName.setText(dto.disName);
-		if (dto.isLocation) {
-			mHolder.imageView.setVisibility(View.VISIBLE);
-			mHolder.imageView.setImageResource(R.drawable.iv_location_red);
-		}else {
-			if (dto.isSelected) {
-				mHolder.imageView.setVisibility(View.VISIBLE);
-				mHolder.imageView.setImageResource(R.drawable.iv_city_selected);
-			}else {
-				mHolder.imageView.setVisibility(View.INVISIBLE);
-			}
-		}
+//		if (dto.isLocation) {
+//			mHolder.imageView.setVisibility(View.VISIBLE);
+//			mHolder.imageView.setImageResource(R.drawable.iv_location_red);
+//		}else {
+//			if (dto.isSelected) {
+//				mHolder.imageView.setVisibility(View.VISIBLE);
+//				mHolder.imageView.setImageResource(R.drawable.iv_city_selected);
+//			}else {
+//				mHolder.imageView.setVisibility(View.INVISIBLE);
+//			}
+//		}
 		
 		
 		return convertView;
