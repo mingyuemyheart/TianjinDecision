@@ -24,6 +24,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    //打包，自动追加版本号、名称
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent, "TianjinGGJ" + "_" + defaultConfig.versionCode + "_V" + defaultConfig.versionName + "_" + buildType.name + ".apk");
+            }
+    }
 }
 
 dependencies {
@@ -43,4 +51,6 @@ dependencies {
     compile files('libs/umeng_social_viewv6.0.0.jar')
     compile files('libs/okhttp-3.8.1.jar')
     compile files('libs/okio-1.13.0.jar')
+    compile files('libs/scene-final.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
 }

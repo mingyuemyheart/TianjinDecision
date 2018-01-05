@@ -701,14 +701,14 @@ public class CommonUtil {
 	 * 判断是否是广告机
 	 * @return
 	 */
-    public static boolean isGuangGaoJi() {
-		boolean flag = false;
-		String product = Build.PRODUCT;
-		String model = Build.MODEL;
-		if (TextUtils.equals(product, "octopus_unilite") && TextUtils.equals(model, "3Q-M185-V1.2")) {
-			flag = true;
-		}
-		return true;
-	}
+//    public static boolean isGuangGaoJi() {
+//		boolean flag = false;
+//		String product = Build.PRODUCT;
+//		String model = Build.MODEL;
+//		if (TextUtils.equals(product, "octopus_unilite") && TextUtils.equals(model, "3Q-M185-V1.2")) {
+//			flag = true;
+//		}
+//		return flag;
+//	}
     
 }

@@ -92,6 +92,15 @@
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_sms_e3b731393fe53226d4ebe74e64e4336e7c246764.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.5_6058d202488ae327ce9916c24bc804d754832a5b.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar"
         jumboMode="true"
@@ -99,6 +108,15 @@
         revision="25.0.3"
         sha1="d22de9aff2febcfe22fe00dbf2aa71aa36e872f9">
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_umengwx_60d8524468d0858bf2ceb60da1d2475b01a3fcca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/universal-image-loader-1.9.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.5_6058d202488ae327ce9916c24bc804d754832a5b/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -110,22 +128,22 @@
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/SocialSDK_WeiXin_2_d2c2a07522cf791cfb65e67c50c705898fc0a8d1.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/scene-final.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f83bea50820e42e7d186ff9650a299adab7a26ec">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/scene-final_ea2f5e5e810e352d5aedd950820347d1750a81f3.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="1559c24d546f6c9dce925eade88cd4b3cb4103ff">
+        sha1="826a8ed22321a4eb1be0491a60c420e76358eb77">
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b37437c17d26559cd921c5b7b3762ec0d14ebefc/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="a6e54a22629e98f8e1d4b4e6a5fa8798c0eff574">
-        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/ChinaWeatherAPI_4915de6b708b57da3e4356f3dd09854de16a5a58.jar" />
     </item>
     <item
         is-multidex="false"
@@ -135,6 +153,15 @@
         revision="25.0.3"
         sha1="a4d92ff8610d7f19521f62b06f858597484b921b">
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/umeng_social_viewv6.0.0_ff05bb0a2edddeb8124fe969d26a8b6f1622eab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a6e54a22629e98f8e1d4b4e6a5fa8798c0eff574">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/pre-dexed/release/ChinaWeatherAPI_4915de6b708b57da3e4356f3dd09854de16a5a58.jar" />
     </item>
     <item
         is-multidex="false"
@@ -162,6 +189,15 @@
         revision="25.0.3"
         sha1="13e37ce9567f5843ccf199ccfd958374b819c9a3">
         <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/SocialSDK_WeiXin_2_d2c2a07522cf791cfb65e67c50c705898fc0a8d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/scene-final.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f83bea50820e42e7d186ff9650a299adab7a26ec">
+        <dex dex="/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/2/scene-final_ea2f5e5e810e352d5aedd950820347d1750a81f3/classes.dex" />
     </item>
     <item
         is-multidex="true"

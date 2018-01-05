@@ -1,4 +1,4 @@
-#Fri Nov 03 10:31:22 CST 2017
+#Thu Jan 04 15:39:39 CST 2018
 base.0=/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b37437c17d26559cd921c5b7b3762ec0d14ebefc
 renamed.1=classes.dex
 renamed.0=classes2.dex

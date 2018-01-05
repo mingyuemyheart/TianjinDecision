@@ -3,12 +3,7 @@ package com.hf.tianjin.view;
 /**
  * 绘制平滑曲线
  */
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,12 +25,15 @@ import com.hf.tianjin.dto.WeatherDto;
 import com.hf.tianjin.utils.CommonUtil;
 import com.hf.tianjin.utils.WeatherUtil;
 
-@SuppressLint({ "SimpleDateFormat", "DrawAllocation" })
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CubicView extends View{
 	
 	private Context mContext = null;
 	private SimpleDateFormat sdf0 = new SimpleDateFormat("yyyyMMddHHmm");
-	private SimpleDateFormat sdf1 = new SimpleDateFormat("HH时");
 	private SimpleDateFormat sdf2 = new SimpleDateFormat("HH");
 	private List<WeatherDto> tempList = new ArrayList<>();
 	private int maxTemp = 0;//最高温度
@@ -47,8 +45,7 @@ public class CubicView extends View{
 	private int scrollX = 0;
 	private int index = 0;
 	private int hScrollViewWidth = 0;
-	private Bitmap bitmap = null;
-	private Bitmap bitmap2 = null;
+	private Bitmap bitmap, bitmap2;
 	private int totalDivider = 0;
 	private int itemDivider = 1;
 	
@@ -78,11 +75,11 @@ public class CubicView extends View{
 		
 		textP = new Paint();
 		textP.setAntiAlias(true);
-		
-		bitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getResources(), R.drawable.bg_hourly), 
-				(int)(CommonUtil.dip2px(mContext, 60)), (int)(CommonUtil.dip2px(mContext, 30)));
-		bitmap2 = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getResources(), R.drawable.bg_hourly2), 
-				(int)(CommonUtil.dip2px(mContext, 60)), (int)(CommonUtil.dip2px(mContext, 30)));
+
+		bitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getResources(), R.drawable.bg_hourly),
+				(int)(CommonUtil.dip2px(mContext, 100)), (int)(CommonUtil.dip2px(mContext, 50)));
+		bitmap2 = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getResources(), R.drawable.bg_hourly2),
+				(int)(CommonUtil.dip2px(mContext, 100)), (int)(CommonUtil.dip2px(mContext, 50)));
 	}
 	
 	/**
@@ -125,8 +122,8 @@ public class CubicView extends View{
 			}
 			maxTemp = maxTemp+itemDivider*3/2;
 			minTemp = minTemp-itemDivider;
-			averTemp = (maxTemp + minTemp)/2;
-			
+			averTemp = (maxTemp+minTemp)/2;
+
 			hourlyCode = tempList.get(0).hourlyCode;
 		}
 	}
@@ -141,10 +138,10 @@ public class CubicView extends View{
 		float w = canvas.getWidth();
 		float h = canvas.getHeight();
 		canvas.drawColor(Color.TRANSPARENT);
-		float chartW = w-CommonUtil.dip2px(mContext, 80);
-		float chartH = h-CommonUtil.dip2px(mContext, 120);
-		float leftMargin = CommonUtil.dip2px(mContext, 40);
-		float rightMargin = CommonUtil.dip2px(mContext, 40);
+		float chartW = w-CommonUtil.dip2px(mContext, 120);
+		float chartH = h-CommonUtil.dip2px(mContext, 150);
+		float leftMargin = CommonUtil.dip2px(mContext, 80);
+		float rightMargin = CommonUtil.dip2px(mContext, 20);
 		float topMargin = CommonUtil.dip2px(mContext, 0);
 		float bottomMargin = CommonUtil.dip2px(mContext, 5);
 		
@@ -164,9 +161,10 @@ public class CubicView extends View{
 		for (int i = minTemp; i <= maxTemp; i+=itemDivider) {
 			float dividerY = chartH*Math.abs(maxTemp-i)/totalDivider;
 			lineP.setColor(0x30ffffff);
-			canvas.drawLine(CommonUtil.dip2px(mContext, 25), dividerY, w-rightMargin, dividerY, lineP);
+			lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 3));
+			canvas.drawLine(CommonUtil.dip2px(mContext, 60), dividerY, w-rightMargin, dividerY, lineP);
 			textP.setColor(mContext.getResources().getColor(R.color.white));
-			textP.setTextSize(CommonUtil.dip2px(mContext, 10));
+			textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_6));
 			canvas.drawText(String.valueOf(i)+"℃", CommonUtil.dip2px(mContext, 5), dividerY, textP);
 		}
 		
@@ -187,7 +185,7 @@ public class CubicView extends View{
 			pathLow.moveTo(x1, y1);
 			pathLow.cubicTo(x3, y3, x4, y4, x2, y2);
 			lineP.setColor(getResources().getColor(R.color.white));
-			lineP.setStrokeWidth(3.0f);
+			lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 5));
 			canvas.drawPath(pathLow, lineP);
 		}
 		
@@ -197,7 +195,7 @@ public class CubicView extends View{
 			
 			//绘制曲线上每个时间点marker
 			lineP.setColor(getResources().getColor(R.color.white));
-			lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 5));
+			lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 15));
 			canvas.drawPoint(dto.x, dto.y, lineP);
 			
 			if (index != i) {
@@ -213,100 +211,91 @@ public class CubicView extends View{
 					}
 					if (i == 0) {
 						hourlyCode = dto.hourlyCode;
-						Bitmap newBit = ThumbnailUtils.extractThumbnail(b, (int)(CommonUtil.dip2px(mContext, 20)), (int)(CommonUtil.dip2px(mContext, 20)));
-						canvas.drawBitmap(newBit, dto.x-newBit.getWidth()/2, dto.y-CommonUtil.dip2px(mContext, 25f), textP);
+						Bitmap newBit = ThumbnailUtils.extractThumbnail(b, (int)(CommonUtil.dip2px(mContext, 40)), (int)(CommonUtil.dip2px(mContext, 40)));
+						canvas.drawBitmap(newBit, dto.x-newBit.getWidth()/2, dto.y-CommonUtil.dip2px(mContext, 35f), textP);
 					}else {
 						if (hourlyCode != dto.hourlyCode) {
 							hourlyCode = dto.hourlyCode;
-							Bitmap newBit = ThumbnailUtils.extractThumbnail(b, (int)(CommonUtil.dip2px(mContext, 20)), (int)(CommonUtil.dip2px(mContext, 20)));
-							canvas.drawBitmap(newBit, dto.x-newBit.getWidth()/2, dto.y-CommonUtil.dip2px(mContext, 25f), textP);
+							Bitmap newBit = ThumbnailUtils.extractThumbnail(b, (int)(CommonUtil.dip2px(mContext, 40)), (int)(CommonUtil.dip2px(mContext, 40)));
+							canvas.drawBitmap(newBit, dto.x-newBit.getWidth()/2, dto.y-CommonUtil.dip2px(mContext, 50f), textP);
 						}
 					}
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
 			}
-			
+
 			//绘制风速风向
 			lineP.setColor(0x60ffffff);
 			lineP.setStyle(Style.FILL);
 			lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 1));
 			String windForce = WeatherUtil.getHourWindForce(dto.hourlyWindForceCode);
-			float windHeight = h-CommonUtil.dip2px(mContext, 25);
+			float windHeight = h-CommonUtil.dip2px(mContext, 35);
 			if (TextUtils.equals(windForce, "微风")) {
-				windHeight = h-CommonUtil.dip2px(mContext, 25);
-			}else if (TextUtils.equals(windForce, "1级")) {
-				windHeight = h-CommonUtil.dip2px(mContext, 30);
-			}else if (TextUtils.equals(windForce, "2级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 35);
-			}else if (TextUtils.equals(windForce, "3级")) {
+			}else if (TextUtils.equals(windForce, "1级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 40);
-			}else if (TextUtils.equals(windForce, "4级")) {
+			}else if (TextUtils.equals(windForce, "2级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 45);
-			}else if (TextUtils.equals(windForce, "5级")) {
+			}else if (TextUtils.equals(windForce, "3级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 50);
-			}else if (TextUtils.equals(windForce, "6级")) {
+			}else if (TextUtils.equals(windForce, "4级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 55);
-			}else if (TextUtils.equals(windForce, "7级")) {
+			}else if (TextUtils.equals(windForce, "5级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 60);
-			}else if (TextUtils.equals(windForce, "8级")) {
+			}else if (TextUtils.equals(windForce, "6级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 65);
-			}else if (TextUtils.equals(windForce, "9级")) {
+			}else if (TextUtils.equals(windForce, "7级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 70);
-			}else if (TextUtils.equals(windForce, "10级")) {
+			}else if (TextUtils.equals(windForce, "8级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 75);
-			}else if (TextUtils.equals(windForce, "11级")) {
+			}else if (TextUtils.equals(windForce, "9级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 80);
-			}else if (TextUtils.equals(windForce, "12级")) {
+			}else if (TextUtils.equals(windForce, "10级")) {
 				windHeight = h-CommonUtil.dip2px(mContext, 85);
+			}else if (TextUtils.equals(windForce, "11级")) {
+				windHeight = h-CommonUtil.dip2px(mContext, 90);
+			}else if (TextUtils.equals(windForce, "12级")) {
+				windHeight = h-CommonUtil.dip2px(mContext, 95);
 			}
 			
 			if (index == i) {
 				lineP.setColor(getResources().getColor(R.color.white));
 				textP.setColor(getResources().getColor(R.color.white));
-				textP.setTextSize(CommonUtil.dip2px(mContext, 10));
+				textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_6));
 				String windDir = mContext.getString(WeatherUtil.getWindDirection(dto.hourlyWindDirCode));
 				float hWindDir = textP.measureText(windDir);
-				canvas.drawText(windDir, dto.x-hWindDir/2, windHeight-CommonUtil.dip2px(mContext, 15f), textP);
+				canvas.drawText(windDir, dto.x-hWindDir/2, windHeight-CommonUtil.dip2px(mContext, 33f), textP);
 				
 				textP.setColor(getResources().getColor(R.color.white));
-				textP.setTextSize(CommonUtil.dip2px(mContext, 10));
+				textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_6));
 				float hWindForce = textP.measureText(windForce);
-				canvas.drawText(windForce, dto.x-hWindForce/2, windHeight-CommonUtil.dip2px(mContext, 3f), textP);
+				canvas.drawText(windForce, dto.x-hWindForce/2, windHeight-CommonUtil.dip2px(mContext, 8f), textP);
 			}else {
 				lineP.setColor(0x60ffffff);
 			}
-			canvas.drawRect(dto.x-halfX+CommonUtil.dip2px(mContext, 2), windHeight, dto.x+halfX-CommonUtil.dip2px(mContext, 2), h-CommonUtil.dip2px(mContext, 20), lineP);
-			
+			canvas.drawRect(dto.x-halfX+CommonUtil.dip2px(mContext, 2), windHeight, dto.x+halfX-CommonUtil.dip2px(mContext, 2), h-CommonUtil.dip2px(mContext, 25), lineP);
+
 			//绘制每个时间点上的时间值
 			textP.setColor(getResources().getColor(R.color.white));
-			textP.setTextSize(CommonUtil.dip2px(mContext, 10));
+			textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_6));
 			try {
-				String hourlyTime = sdf1.format(sdf0.parse(tempList.get(i).hourlyTime));
-				canvas.drawText(hourlyTime, dto.x-CommonUtil.dip2px(mContext, 12.5f), h-bottomMargin, textP);
+				String hourlyTime = sdf2.format(sdf0.parse(tempList.get(i).hourlyTime));
+				canvas.drawText(hourlyTime, dto.x-CommonUtil.dip2px(mContext, 12f), h-bottomMargin, textP);
 			} catch (ParseException e) {
-				e.printStackTrace();
-			} catch (NullPointerException e) {
 				e.printStackTrace();
 			}
 		}
 		
-		//绘制时间点一行的直线
-		lineP.setStyle(Style.STROKE);
-		lineP.setColor(0x30ffffff);
-		lineP.setStrokeWidth(CommonUtil.dip2px(mContext, 1));
-		canvas.drawLine(0, h-CommonUtil.dip2px(mContext, 20), w, h-CommonUtil.dip2px(mContext, 20), lineP);
-		
-		
 		//绘制曲线上每个点的信息
-		if (tempList.get(index).hourlyTemp < averTemp) {
-			canvas.drawBitmap(bitmap, tempList.get(index).x-bitmap.getWidth()/2+(int)(CommonUtil.dip2px(mContext, 1)), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 35)), textP);
+		if (tempList.get(index).hourlyTemp > averTemp) {
+			canvas.drawBitmap(bitmap2, tempList.get(index).x-bitmap.getWidth()/2-(int)(CommonUtil.dip2px(mContext, 2)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 5)), textP);
 			textP.setColor(Color.WHITE);
-			textP.setTextSize(CommonUtil.dip2px(mContext, 12));
-			canvas.drawText(String.valueOf(tempList.get(index).hourlyTemp)+mContext.getString(R.string.unit_degree), tempList.get(index).x+(int)(CommonUtil.dip2px(mContext, 5)), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 19)), textP);
+			textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_5));
+			canvas.drawText(String.valueOf(tempList.get(index).hourlyTemp)+mContext.getString(R.string.unit_degree), tempList.get(index).x+(int)(CommonUtil.dip2px(mContext, 5)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 45)), textP);
 			try {
-				long zao8 = sdf2.parse("08").getTime();
-				long wan8 = sdf2.parse("20").getTime();
+				long zao8 = sdf2.parse("06").getTime();
+				long wan8 = sdf2.parse("18").getTime();
 				long current = sdf2.parse(sdf2.format(sdf0.parse(tempList.get(index).hourlyTime))).getTime();
 				Bitmap lb = null;
 				if (current >= zao8 && current < wan8) {
@@ -314,19 +303,19 @@ public class CubicView extends View{
 				}else {
 					lb = WeatherUtil.getNightBitmap(mContext, tempList.get(index).hourlyCode);
 				}
-				Bitmap newLbit = ThumbnailUtils.extractThumbnail(lb, (int)(CommonUtil.dip2px(mContext, 20)), (int)(CommonUtil.dip2px(mContext, 20)));
-				canvas.drawBitmap(newLbit, tempList.get(index).x-newLbit.getWidth(), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 32)), textP);
+				Bitmap newLbit = ThumbnailUtils.extractThumbnail(lb, (int)(CommonUtil.dip2px(mContext, 30)), (int)(CommonUtil.dip2px(mContext, 30)));
+				canvas.drawBitmap(newLbit, tempList.get(index).x-newLbit.getWidth()-(int)(CommonUtil.dip2px(mContext, 5)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 20)), textP);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
 		}else {
-			canvas.drawBitmap(bitmap2, tempList.get(index).x-bitmap2.getWidth()/2-(int)(CommonUtil.dip2px(mContext, 1)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 5)), textP);
+			canvas.drawBitmap(bitmap, tempList.get(index).x-bitmap.getWidth()/2+(int)(CommonUtil.dip2px(mContext, 2)), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 58)), textP);
 			textP.setColor(Color.WHITE);
-			textP.setTextSize(CommonUtil.dip2px(mContext, 12));
-			canvas.drawText(String.valueOf(tempList.get(index).hourlyTemp)+mContext.getString(R.string.unit_degree), tempList.get(index).x+(int)(CommonUtil.dip2px(mContext, 3)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 26)), textP);
+			textP.setTextSize(getResources().getDimensionPixelSize(R.dimen.level_5));
+			canvas.drawText(String.valueOf(tempList.get(index).hourlyTemp)+mContext.getString(R.string.unit_degree), tempList.get(index).x+(int)(CommonUtil.dip2px(mContext, 5)), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 25)), textP);
 			try {
-				long zao8 = sdf2.parse("08").getTime();
-				long wan8 = sdf2.parse("20").getTime();
+				long zao8 = sdf2.parse("06").getTime();
+				long wan8 = sdf2.parse("18").getTime();
 				long current = sdf2.parse(sdf2.format(sdf0.parse(tempList.get(index).hourlyTime))).getTime();
 				Bitmap lb = null;
 				if (current >= zao8 && current < wan8) {
@@ -334,12 +323,16 @@ public class CubicView extends View{
 				}else {
 					lb = WeatherUtil.getNightBitmap(mContext, tempList.get(index).hourlyCode);
 				}
-				Bitmap newLbit = ThumbnailUtils.extractThumbnail(lb, (int)(CommonUtil.dip2px(mContext, 20)), (int)(CommonUtil.dip2px(mContext, 20)));
-				canvas.drawBitmap(newLbit, tempList.get(index).x-newLbit.getWidth()-(int)(CommonUtil.dip2px(mContext, 2)), tempList.get(index).y+(int)(CommonUtil.dip2px(mContext, 14)), textP);
+				Bitmap newLbit = ThumbnailUtils.extractThumbnail(lb, (int)(CommonUtil.dip2px(mContext, 30)), (int)(CommonUtil.dip2px(mContext, 30)));
+				canvas.drawBitmap(newLbit, tempList.get(index).x-newLbit.getWidth()-(int)(CommonUtil.dip2px(mContext, 5)), tempList.get(index).y-(int)(CommonUtil.dip2px(mContext, 50)), textP);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
 		}
+
+		lineP.reset();
+		textP.reset();
+
 	}
 	
 	public Handler handler = new Handler(){
@@ -352,7 +345,7 @@ public class CubicView extends View{
 					index = tempList.size()-1;
 				}
 				Log.e("index", index+"");
-				
+
 				postInvalidate();
 			}
 		};

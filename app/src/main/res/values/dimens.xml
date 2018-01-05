@@ -1,10 +1,18 @@
 <resources>
 
-    <dimen name="level_1">20dip</dimen>
-    <dimen name="level_2">18dip</dimen>
-    <dimen name="level_3">16dip</dimen>
-    <dimen name="level_4">14dip</dimen>
-    <dimen name="level_5">12dip</dimen>
-    <dimen name="level_6">10dip</dimen>
+    <dimen name="level_1">44sp</dimen>
+    <dimen name="level_2">40sp</dimen>
+    <dimen name="level_3">36sp</dimen>
+    <dimen name="level_4">32sp</dimen>
+    <dimen name="level_5">28sp</dimen>
+    <dimen name="level_6">24sp</dimen>
+
+
+    <!--<dimen name="level_left">20sp</dimen>-->
+    <!--<dimen name="level_top">40sp</dimen>-->
+    <!--<dimen name="level_right">20sp</dimen>-->
+    <!--<dimen name="level_bottom">5sp</dimen>-->
+    <!--<dimen name="level_20">30sp</dimen>-->
+    <!--<dimen name="level_25">35sp</dimen>-->
 
 </resources>

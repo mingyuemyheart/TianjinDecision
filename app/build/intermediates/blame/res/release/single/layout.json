@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/fragment_index.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/fragment_index.xml"
-    },
-    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_action_tombstone.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_action_tombstone.xml"
     },
@@ -16,8 +12,12 @@
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_custom_big.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_custom_big.xml"
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_titile_bar.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_titile_bar.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_visiblity_fragment.xml",
@@ -32,6 +32,14 @@
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_province_cell.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/quanyunhui.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/quanyunhui.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_marker_info_cell.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_marker_info_cell.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_rain_fragment.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_rain_fragment.xml"
     },
@@ -40,16 +48,36 @@
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/feedback.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_list.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_list.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_part_chronometer.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/city.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/city.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_lines_media.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_lines_media.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_select_dialog_material.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_screen_simple.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_screen_simple.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/route_search.xml",
@@ -60,16 +88,60 @@
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/route_weather.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/route_weather.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_part_time.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/auto_update_dialog.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/auto_update_dialog.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/select_dialog_singlechoice_material.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_rank.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_rank.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/area_item.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/area_item.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/fragment_banner.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/fragment_banner.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/layout_title.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/layout_title.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_action.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/loading2.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/loading2.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_detail.xml",
@@ -80,6 +152,18 @@
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/middle.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/left_cell.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/left_cell.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_shareboard_item.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_shareboard_item.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/route_search_cell.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/route_search_cell.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_expanded_menu_layout.xml"
     },
@@ -88,32 +172,96 @@
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_screen_content_include.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_oauth_dialog.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_oauth_dialog.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_rank_search_item.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_rank_search_item.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_cell.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_cell.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_media.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_item.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_item.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/activity_main.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_temp_fragment.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_temp_fragment.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_mode_bar.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/around_weather_item.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/around_weather_item.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_marker_info.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_marker_info.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/select_dialog_item_material.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_pressure_fragment.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_pressure_fragment.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/wait_wind.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/wait_wind.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_dialog_title_material.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/webview.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/webview.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_list_cell.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_list_cell.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_detail.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_detail.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_screen_toolbar.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_search.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_search.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_marker_view.xml",
@@ -140,8 +288,28 @@
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/fragment_index_item.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/fragment_index_item.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/marker_view.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/marker_view.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/activity_area.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/activity_area.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/quality.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/quality.xml"
+    },
+    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_media_custom.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_title_item.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/delete_dialog.xml",
@@ -154,6 +322,18 @@
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_humidity_fragment.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_humidity_fragment.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/welcome.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/welcome.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_menu_layout.xml",
+        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_menu_item_layout.xml",
@@ -172,204 +352,12 @@
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor.xml"
     },
     {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_province_header.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_province_header.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_alert_dialog_title_material.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_titile_bar.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_titile_bar.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/quanyunhui.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/quanyunhui.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_marker_info_cell.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_marker_info_cell.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_list.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_list.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_lines_media.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_lines_media.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_screen_simple.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_screen_simple.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/route_weather.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/route_weather.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/auto_update_dialog.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/auto_update_dialog.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_up_container.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_rank.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_rank.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/area_item.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/area_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/layout_title.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/layout_title.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_action.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_action.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/loading2.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/loading2.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/left_cell.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/left_cell.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_shareboard_item.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_shareboard_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/route_search_cell.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/route_search_cell.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/umeng_socialize_oauth_dialog.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/umeng_socialize_oauth_dialog.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/notification_template_media.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/notification_template_media.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_item.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/activity_main.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/activity_main.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_temp_fragment.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_temp_fragment.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_checkbox.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/around_weather_item.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/around_weather_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_marker_info.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_marker_info.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/wait_wind.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/wait_wind.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_dialog_title_material.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/warning_list_cell.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/warning_list_cell.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_detail.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_detail.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/middle2.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/middle2.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/activity_main2.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/activity_main2.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_search.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_search.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/fragment_index_item.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/fragment_index_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/marker_view.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/marker_view.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/activity_area.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/activity_area.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/quality.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/quality.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_detail_humidity_fragment.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_detail_humidity_fragment.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_action_menu_layout.xml",
-        "source": "/Users/shawn/.android/build-cache/c927dcc2c29b04a7382d20241212bdbf42ddbdd0/output/res/layout/abc_action_menu_layout.xml"
-    },
-    {
-        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/welcome.xml",
-        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/welcome.xml"
-    },
-    {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/left.xml",
         "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/left.xml"
+    },
+    {
+        "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/station_monitor_province_header.xml",
+        "source": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/src/main/res/layout/station_monitor_province_header.xml"
     },
     {
         "merged": "/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/res/merged/release/layout/abc_alert_dialog_material.xml",

@@ -1,4 +1,4 @@
-#Thu Nov 09 12:58:53 CST 2017
+#Thu Jan 04 15:39:38 CST 2018
 base.0=/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
 renamed.0=classes.dex
 file.0=/Users/shawn/AndroidStudioProjects/TianjinDecision/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex

@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="45dp"
-        android:layout_height="45dp" />
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginTop="3dp"
-            android:text="舒适度指数："
+            android:singleLine="true"
             android:textColor="@color/white"
             android:textSize="@dimen/level_5" />
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tvName"
-            android:text="较适宜"
+            android:singleLine="true"
             android:textColor="@color/white"
             android:textSize="@dimen/level_4" />
     </RelativeLayout>

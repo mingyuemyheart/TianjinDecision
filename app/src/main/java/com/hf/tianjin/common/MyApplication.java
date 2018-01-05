@@ -2,6 +2,8 @@ package com.hf.tianjin.common;
 
 import android.app.Application;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.umeng.socialize.PlatformConfig;
 
 public class MyApplication extends Application{
@@ -9,6 +11,10 @@ public class MyApplication extends Application{
 	@Override
 	public void onCreate() {
 		super.onCreate();
+
+		//初始化Imageloader
+		ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(getApplicationContext());
+		ImageLoader.getInstance().init(configuration);
 	}
 	{
 		//umeng分享的平台注册
