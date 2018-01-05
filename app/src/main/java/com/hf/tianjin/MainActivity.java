@@ -100,7 +100,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Timer;
-import java.util.TimerTask;
 
 import cn.com.weather.api.WeatherAPI;
 import cn.com.weather.beans.Weather;
@@ -215,11 +214,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (CommonUtil.isGuangGaoJi()) {
-			setContentView(R.layout.activity_main2);
-		}else {
-			setContentView(R.layout.activity_main);
-		}
+		setContentView(R.layout.activity_main);
 		mContext = this;
 		initRefreshLayout();
 		initWidget();
@@ -383,23 +378,11 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 		
 		mRadarManager = new ChartRainManager(mContext);
 
-		if (CommonUtil.isGuangGaoJi()) {
-			if (timer == null) {
-				timer = new Timer();
-				timer.schedule(new TimerTask() {
-					@Override
-					public void run() {
-						refresh();
-					}
-				}, 0, 1000*60*10);
-			}
-		}else {
-			RelativeLayout.LayoutParams params1 = (LayoutParams) reTitle.getLayoutParams();
-			RelativeLayout.LayoutParams params2 = (LayoutParams) reBottom.getLayoutParams();
-			params2.setMargins(0, height-params1.height-params2.height, 0, 0);
-			reBottom.setLayoutParams(params2);
-			refresh();
-		}
+		RelativeLayout.LayoutParams params1 = (LayoutParams) reTitle.getLayoutParams();
+		RelativeLayout.LayoutParams params2 = (LayoutParams) reBottom.getLayoutParams();
+		params2.setMargins(0, height-params1.height-params2.height, 0, 0);
+		reBottom.setLayoutParams(params2);
+		refresh();
 
 	}
 	
@@ -1429,11 +1412,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 						}
 					}
 
-					if (CommonUtil.isGuangGaoJi()) {
-						ivShare.setVisibility(View.GONE);
-					}else {
-						ivShare.setVisibility(View.VISIBLE);
-					}
+					ivShare.setVisibility(View.VISIBLE);
 					scrollView.setVisibility(View.VISIBLE);
 //					scrollView.scrollTo(0, 0);
 				}
