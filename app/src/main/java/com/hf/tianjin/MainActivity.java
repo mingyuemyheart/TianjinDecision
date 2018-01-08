@@ -13,10 +13,8 @@ import android.os.Message;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,11 +45,6 @@ import com.hf.tianjin.view.CubicView;
 import com.hf.tianjin.view.WeeklyView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
-
-import net.tsz.afinal.FinalBitmap;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -268,7 +261,16 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 		});
 		DataCleanManager.clearCache(mContext);
 		initViewPager();
-		startLocation();
+		if (CommonUtil.isLocationOpen(mContext)) {
+			startLocation();
+		}else {
+			tvTitle.setText("津南区气象局");
+			String id = "101031000";
+			//判断是否隶属于天津市，更换背景图片
+			isTianJin(id);
+			//获取定位城市所有信息
+			queryAllInfo(id);
+		}
 		asyncTianjinEvent("http://decision-admin.tianqi.cn/Home/extra/getTJMainActivity");
 	}
 	
