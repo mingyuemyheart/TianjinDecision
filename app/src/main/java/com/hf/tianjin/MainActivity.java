@@ -40,6 +40,7 @@ import com.hf.tianjin.manager.ChartRainManager.ChartRainListener;
 import com.hf.tianjin.manager.DataCleanManager;
 import com.hf.tianjin.utils.CommonUtil;
 import com.hf.tianjin.utils.CustomHttpClient;
+import com.hf.tianjin.utils.OkHttpUtil;
 import com.hf.tianjin.utils.WeatherUtil;
 import com.hf.tianjin.view.CubicView;
 import com.hf.tianjin.view.WeeklyView;
@@ -51,6 +52,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -64,6 +66,10 @@ import cn.com.weather.api.WeatherAPI;
 import cn.com.weather.beans.Weather;
 import cn.com.weather.constants.Constants.Language;
 import cn.com.weather.listener.AsyncResponseHandler;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class MainActivity extends BaseActivity implements AMapLocationListener, ChartRainListener{
 	
@@ -261,16 +267,16 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 		});
 		DataCleanManager.clearCache(mContext);
 		initViewPager();
-		if (CommonUtil.isLocationOpen(mContext)) {
-			startLocation();
-		}else {
+//		if (CommonUtil.isLocationOpen(mContext)) {
+//			startLocation();
+//		}else {
 			tvTitle.setText("津南区气象局");
 			String id = "101031000";
 			//判断是否隶属于天津市，更换背景图片
 			isTianJin(id);
 			//获取定位城市所有信息
 			queryAllInfo(id);
-		}
+//		}
 		asyncTianjinEvent("http://decision-admin.tianqi.cn/Home/extra/getTJMainActivity");
 	}
 	
@@ -380,7 +386,7 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 	private void queryAllInfo(final String cityId) {
 		if (!TextUtils.isEmpty(cityId) && TextUtils.equals(cityId.substring(0, 5), CONST.TIANJINCITYID)) {
 			CONST.ISTIANJIN = true;
-			asyncQueryTianjin("http://211.99.240.5:8080/datafusion/GetRhdata?ID="+cityId);
+//			asyncQueryTianjin("http://211.99.240.5:8080/datafusion/GetRhdata?ID="+cityId);
 			getWeatherInfo(cityId);
 		}else {
 			CONST.ISTIANJIN = false;
@@ -645,56 +651,11 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 					} catch (JSONException e) {
 						e.printStackTrace();
 					}
-
-					//预警
-					try {
-						warningList.clear();
-						JSONArray warningArray = content.getWarningInfo();
-						if (warningArray != null && warningArray.length() > 0) {
-							for (int j = 0; j < warningArray.length(); j++) {
-								JSONObject warningObj = warningArray.getJSONObject(j);
-								if (!warningObj.isNull("w11")) {
-									WarningDto dto = new WarningDto();
-									String html = warningObj.getString("w11");
-									dto.html = html;
-									if (!TextUtils.isEmpty(html) && html.contains("content2")) {
-										dto.html = html.substring(html.indexOf("content2/")+"content2/".length(), html.length());
-										String[] array = dto.html.split("-");
-										String item0 = array[0];
-										String item1 = array[1];
-										String item2 = array[2];
-
-										dto.item0 = item0;
-										dto.provinceId = item0.substring(0, 2);
-										dto.type = item2.substring(0, 5);
-										dto.color = item2.substring(5, 7);
-										dto.time = item1;
-										String w1 = warningObj.getString("w1");
-										String w3 = warningObj.getString("w3");
-										String w5 = warningObj.getString("w5");
-										String w7 = warningObj.getString("w7");
-										dto.name = w1+w3+"发布"+w5+w7+"预警";
-										warningList.add(dto);
-
-										if (j == 0) {
-											tvWarning.setText(w5+w7+"预警");
-											tvWarning.setVisibility(View.VISIBLE);
-										}
-									}
-								}
-							}
-						}else {
-							tvWarning.setText(getString(R.string.no_warning));
-							tvWarning.setVisibility(View.VISIBLE);
-						}
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
 					
-					if (!TextUtils.isEmpty(cityId) && TextUtils.equals(cityId.substring(0, 5), CONST.TIANJINCITYID)) {
-						CONST.ISTIANJIN = true;
-					}else {
-						CONST.ISTIANJIN = false;
+//					if (!TextUtils.isEmpty(cityId) && TextUtils.equals(cityId.substring(0, 5), CONST.TIANJINCITYID)) {
+//						CONST.ISTIANJIN = true;
+//					}else {
+//						CONST.ISTIANJIN = false;
 						//一周预报信息
 						try {
 							List<WeatherDto> weeklyList = new ArrayList<>();
@@ -771,7 +732,7 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 								dto.hourlyWindForceCode = Integer.valueOf(itemObj.getString("jd"));
 								hourlyList.add(dto);
 							}
-							
+
 							//逐小时预报信息
 							CubicView cubicView = new CubicView(mContext);
 							cubicView.setData(hourlyList, width);
@@ -782,7 +743,7 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 						} catch (NullPointerException e) {
 							e.printStackTrace();
 						}
-					}
+//					}
 
 					scrollView.setVisibility(View.VISIBLE);
 //					scrollView.scrollTo(0, 0);
@@ -793,6 +754,93 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 			@Override
 			public void onError(Throwable error, String content) {
 				super.onError(error, content);
+			}
+		});
+
+		OkhttpWarning("http://decision-admin.tianqi.cn/Home/extra/getwarns?order=1&areaid=12");
+	}
+
+	/**
+	 * 获取预警信息
+	 */
+	private void OkhttpWarning(String requestUrl) {
+		OkHttpUtil.enqueue(new Request.Builder().url(requestUrl).build(), new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				if (!response.isSuccessful()) {
+					return;
+				}
+				final String result = response.body().string();
+				runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						warningList.clear();
+						if (result != null) {
+							try {
+								JSONObject object = new JSONObject(result);
+								if (!object.isNull("count")) {
+									String count = object.getString("count");
+									if (!TextUtils.equals(count, "0")) {
+										if (!object.isNull("data")) {
+											JSONArray jsonArray = object.getJSONArray("data");
+											for (int i = jsonArray.length()-1; i >= 0; i--) {
+												JSONArray tempArray = jsonArray.getJSONArray(i);
+												WarningDto dto = new WarningDto();
+												dto.html = tempArray.optString(1);
+												String[] array = dto.html.split("-");
+												String item0 = array[0];
+												String item1 = array[1];
+												String item2 = array[2];
+												dto.item0 = item0;
+												dto.provinceId = item0.substring(0, 2);
+												dto.type = item2.substring(0, 5);
+												dto.color = item2.substring(5, 7);
+												dto.time = item1;
+												dto.lng = tempArray.optString(2);
+												dto.lat = tempArray.optString(3);
+												dto.name = tempArray.optString(0);
+												if (!dto.name.contains("解除") && (TextUtils.equals(dto.item0, "120000") || TextUtils.equals(dto.item0, "120112"))) {
+													warningList.add(dto);
+												}
+											}
+
+											int size = warningList.size();
+											if (size > 0) {
+												String name = warningList.get(0).name;
+												if (name.contains("发布")) {
+													String[] nameArray = name.split("发布");
+													if (!TextUtils.isEmpty(nameArray[1])) {
+														if (nameArray[1].contains("[") && nameArray[1].contains("]")) {
+															tvWarning.setText(nameArray[1].substring(0, nameArray[1].indexOf("[")));
+														}else if (nameArray[1].contains("/")){
+															tvWarning.setText(nameArray[1].substring(0, nameArray[1].indexOf("/")));
+														}
+													}
+												}else {
+													tvWarning.setText(name);
+												}
+											}else {
+												tvWarning.setText(getString(R.string.no_warning));
+											}
+											tvWarning.setVisibility(View.VISIBLE);
+										}
+									}else {
+										tvWarning.setText(getString(R.string.no_warning));
+										tvWarning.setVisibility(View.VISIBLE);
+									}
+								}
+							} catch (JSONException e) {
+								e.printStackTrace();
+							}
+						}
+					}
+				});
+
 			}
 		});
 	}

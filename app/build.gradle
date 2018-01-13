@@ -13,8 +13,8 @@ android {
         applicationId "com.hf.tianjin"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 30
-        versionName "1.0.29"
+        versionCode 32
+        versionName "1.0.31"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -53,4 +53,5 @@ dependencies {
     compile files('libs/okio-1.13.0.jar')
     compile files('libs/scene-final.jar')
     compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':mail')
 }

@@ -1,9 +1,11 @@
 package com.hf.tianjin.common;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.shidian.mail.SendMailUtil;
 import com.umeng.socialize.PlatformConfig;
 
 public class MyApplication extends Application{
@@ -11,6 +13,9 @@ public class MyApplication extends Application{
 	@Override
 	public void onCreate() {
 		super.onCreate();
+
+//		CrashHandler ch = CrashHandler.getInstance();
+//		ch.init(this);
 
 		//初始化Imageloader
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(getApplicationContext());
@@ -22,4 +27,9 @@ public class MyApplication extends Application{
 		PlatformConfig.setQQZone("1105801661", "sxRQtuRvfnwohkKQ");
 	}
 
+	@Override
+	public void onTerminate() {
+		super.onTerminate();
+		SendMailUtil.send("1023453818@qq.com");
+	}
 }
