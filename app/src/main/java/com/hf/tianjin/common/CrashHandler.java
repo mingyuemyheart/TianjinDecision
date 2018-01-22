@@ -28,6 +28,6 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler{
 
     @Override
     public void uncaughtException(Thread t, Throwable e) {
-        SendMailUtil.send("1023453818@qq.com");
+        SendMailUtil.send("1023453818@qq.com", MyApplication.location);
     }
 }

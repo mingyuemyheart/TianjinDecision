@@ -9,13 +9,15 @@ import com.shidian.mail.SendMailUtil;
 import com.umeng.socialize.PlatformConfig;
 
 public class MyApplication extends Application{
+
+	public static String location = "";
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
 
-//		CrashHandler ch = CrashHandler.getInstance();
-//		ch.init(this);
+		CrashHandler ch = CrashHandler.getInstance();
+		ch.init(this);
 
 		//初始化Imageloader
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(getApplicationContext());
@@ -30,6 +32,6 @@ public class MyApplication extends Application{
 	@Override
 	public void onTerminate() {
 		super.onTerminate();
-		SendMailUtil.send("1023453818@qq.com");
+		SendMailUtil.send("1023453818@qq.com", MyApplication.location);
 	}
 }

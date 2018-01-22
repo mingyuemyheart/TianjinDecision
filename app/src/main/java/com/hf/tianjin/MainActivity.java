@@ -32,6 +32,7 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationClientOption.AMapLocationMode;
 import com.amap.api.location.AMapLocationListener;
 import com.hf.tianjin.common.CONST;
+import com.hf.tianjin.common.MyApplication;
 import com.hf.tianjin.dto.ChartDto;
 import com.hf.tianjin.dto.WarningDto;
 import com.hf.tianjin.dto.WeatherDto;
@@ -46,6 +47,7 @@ import com.hf.tianjin.view.CubicView;
 import com.hf.tianjin.view.WeeklyView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.shidian.mail.SendMailUtil;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -267,16 +269,17 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 		});
 		DataCleanManager.clearCache(mContext);
 		initViewPager();
-//		if (CommonUtil.isLocationOpen(mContext)) {
-//			startLocation();
-//		}else {
+		if (CommonUtil.isLocationOpen(mContext)) {
+			startLocation();
+		}else {
 			tvTitle.setText("津南区气象局");
+			MyApplication.location = tvTitle.getText().toString();
 			String id = "101031000";
 			//判断是否隶属于天津市，更换背景图片
 			isTianJin(id);
 			//获取定位城市所有信息
 			queryAllInfo(id);
-//		}
+		}
 		asyncTianjinEvent("http://decision-admin.tianqi.cn/Home/extra/getTJMainActivity");
 	}
 	
@@ -341,6 +344,7 @@ public class MainActivity extends BaseActivity implements AMapLocationListener, 
 	public void onLocationChanged(AMapLocation amapLocation) {
 		if (amapLocation != null && amapLocation.getErrorCode() == 0) {
         	tvTitle.setText(amapLocation.getPoiName());
+			MyApplication.location = tvTitle.getText().toString();
         	getCityId(amapLocation.getLongitude(), amapLocation.getLatitude());
         }
 	}
