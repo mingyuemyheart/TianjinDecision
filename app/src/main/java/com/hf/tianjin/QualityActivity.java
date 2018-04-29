@@ -1,17 +1,5 @@
 package com.hf.tianjin;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.http.NameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -34,6 +22,18 @@ import com.hf.tianjin.utils.StatisticUtil;
 import com.hf.tianjin.utils.WeatherUtil;
 import com.hf.tianjin.view.AqiQualityView;
 
+import org.apache.http.NameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 /**
  * 空气质量
  * @author shawn_sun
@@ -42,7 +42,7 @@ import com.hf.tianjin.view.AqiQualityView;
 
 @SuppressLint("SimpleDateFormat")
 public class QualityActivity extends BaseActivity implements OnClickListener{
-	
+
 	private Context mContext = null;
 	private LinearLayout llBack = null;
 	private TextView tvTitle = null;
@@ -61,6 +61,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 	private int width = 0;
 	private LinearLayout llContainer = null;
 	private SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMddHH");
+	private SimpleDateFormat sdf2 = new SimpleDateFormat("yyyyMMddHHmmss");
 	private SimpleDateFormat sdf3 = new SimpleDateFormat("yyyyMMddHHmm");
 	private SimpleDateFormat sdf4 = new SimpleDateFormat("MM月dd日HH时");
 	public final static String SANX_DATA_99 = "sanx_data_99";//加密秘钥名称
@@ -76,7 +77,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		mContext = this;
 		initWidget();
 	}
-	
+
 	private void initWidget() {
 		llBack = (LinearLayout) findViewById(R.id.llBack);
 		llBack.setOnClickListener(this);
@@ -97,74 +98,74 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		llContainer = (LinearLayout) findViewById(R.id.llContainer);
 		progressBar = (ProgressBar) findViewById(R.id.progressBar);
 		reMain = (RelativeLayout) findViewById(R.id.reMain);
-		
+
 		DisplayMetrics dm = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(dm);
 		width = dm.widthPixels;
-		
+
 		setIntentAqiData();
-    	
-    	String title = getIntent().getStringExtra("cityName");
-    	if (!TextUtils.isEmpty(title)) {
+
+		String title = getIntent().getStringExtra("cityName");
+		if (!TextUtils.isEmpty(title)) {
 			tvName.setText(title);
 		}
-    	
-    	lat = getIntent().getStringExtra("lat");
-    	lng = getIntent().getStringExtra("lng");
-    	cityId = getIntent().getStringExtra("cityId");
-    	asyncTaskRank(cityId);
-    	queryXiangJiAqi(lat, lng);
-    	
+
+		lat = getIntent().getStringExtra("lat");
+		lng = getIntent().getStringExtra("lng");
+		cityId = getIntent().getStringExtra("cityId");
+		asyncTaskRank(cityId);
+		queryXiangJiAqi(lat, lng);
+
 		StatisticUtil.submitClickCount("3", "空气质量");
 	}
-	
+
 	/**
 	 * 获取上个界面传过来的aqi数据并赋值
 	 */
 	private void setIntentAqiData() {
 		AqiDto data = getIntent().getExtras().getParcelable("aqiData");
-    	if (data != null) {
-			if (!TextUtils.isEmpty(data.date)) {
-				try {
-					tvTime.setText("环境监测总站"+sdf4.format(sdf3.parse(data.date))+"更新");
-				} catch (ParseException e) {
-					e.printStackTrace();
-				}
-			}
-		
-			if (!TextUtils.isEmpty(data.aqi)) {
-				tvAqiCount.setText(data.aqi);
-				tvAqi.setText(WeatherUtil.getAqi(mContext, Integer.valueOf(data.aqi)));
-				tvAqi.setBackgroundResource(getCornerBackground(Integer.valueOf(data.aqi)));
-				tvPrompt.setText(getPrompt(Integer.valueOf(data.aqi)));
-			}
-		
+		if (data != null) {
+//			if (!TextUtils.isEmpty(data.date)) {
+//				try {
+//					tvTime.setText("环境监测总站"+sdf4.format(sdf3.parse(data.date))+"更新");
+//				} catch (ParseException e) {
+//					e.printStackTrace();
+//				}
+//			}
+
+//			if (!TextUtils.isEmpty(data.aqi)) {
+//				tvAqiCount.setText(data.aqi);
+//				tvAqi.setText(WeatherUtil.getAqi(mContext, Integer.valueOf(data.aqi)));
+//				tvAqi.setBackgroundResource(getCornerBackground(Integer.valueOf(data.aqi)));
+//				tvPrompt.setText(getPrompt(Integer.valueOf(data.aqi)));
+//			}
+
 			if (!TextUtils.isEmpty(data.pm2_5)) {
 				tvPm2_5.setText(data.pm2_5);
 			}
-		
+
 			if (!TextUtils.isEmpty(data.pm10)) {
 				tvPm10.setText(data.pm10);
 			}
-		
+
 			if (!TextUtils.isEmpty(data.NO2)) {
 				tvNO2.setText(data.NO2);
 			}
-		
+
 			if (!TextUtils.isEmpty(data.SO2)) {
 				tvSO2.setText(data.SO2);
 			}
-		
+
 			if (!TextUtils.isEmpty(data.O3)) {
 				tvO3.setText(data.O3);
 			}
-		
+
 			if (!TextUtils.isEmpty(data.CO)) {
 				tvCO.setText(data.CO);
 			}
 		}
 	}
-	
+
 	/**
 	 * 根据aqi数据获取相对应的背景图标
 	 * @param value
@@ -187,7 +188,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		}
 		return drawable;
 	}
-	
+
 	/**
 	 * 根据aqi值获取aqi的提示信息
 	 * @param value
@@ -210,12 +211,9 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		}
 		return aqi;
 	}
-	
+
 	/**
 	 * 加密请求字符串
-	 * @param url 基本串
-	 * @param lng 经度
-	 * @param lat 维度
 	 * @return
 	 */
 	private String getSecretUrl(String areaids) {
@@ -229,10 +227,10 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		buffer.append("areaids=").append(areaids);
 		buffer.append("&");
 		buffer.append("appid=").append(APPID);
-		
+
 		String key = RainManager.getKey(SANX_DATA_99, buffer.toString());
 		buffer.delete(buffer.lastIndexOf("&"), buffer.length());
-		
+
 		buffer.append("&");
 		buffer.append("appid=").append(APPID.substring(0, 6));
 		buffer.append("&");
@@ -240,7 +238,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		String result = buffer.toString();
 		return result;
 	}
-	
+
 	/**
 	 * 获取aqi排行
 	 */
@@ -254,7 +252,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		task.setTimeOut(CustomHttpClient.TIME_OUT);
 		task.execute(getSecretUrl(areaids));
 	}
-	
+
 	/**
 	 * 异步请求方法
 	 * @author dell
@@ -263,7 +261,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 	private class HttpAsyncTaskRank extends AsyncTask<String, Void, String> {
 		private String method = "GET";
 		private List<NameValuePair> nvpList = new ArrayList<NameValuePair>();
-		
+
 		public HttpAsyncTaskRank() {
 		}
 
@@ -319,20 +317,20 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 			this.cancel(true);
 		}
 	}
-	
+
 	/**
 	 * 请求象辑aqi
 	 */
 	private void queryXiangJiAqi(String lat, String lng) {
 		Date date = new Date();
-    	long timestamp = date.getTime();
-    	String start1 = sdf1.format(timestamp);
-    	String end1 = sdf1.format(timestamp+1000*60*60*24);
-    	if (!TextUtils.isEmpty(lat) && !TextUtils.isEmpty(lng)) {
-    		asyncQueryXiangJi(XiangJiManager.getXJHourFore(Double.valueOf(lng), Double.valueOf(lat), start1, end1, timestamp));
+		long timestamp = date.getTime();
+		String start1 = sdf1.format(timestamp);
+		String end1 = sdf1.format(timestamp+1000*60*60*24);
+		if (!TextUtils.isEmpty(lat) && !TextUtils.isEmpty(lng)) {
+			asyncQueryXiangJi(XiangJiManager.getXJHourFore(Double.valueOf(lng), Double.valueOf(lat), start1, end1, timestamp));
 		}
 	}
-	
+
 	/**
 	 * 异步请求
 	 */
@@ -342,7 +340,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 		task.setTimeOut(CustomHttpClient.TIME_OUT);
 		task.execute(requestUrl);
 	}
-	
+
 	/**
 	 * 异步请求方法
 	 * @author dell
@@ -351,7 +349,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 	private class HttpAsyncTaskXiangJi extends AsyncTask<String, Void, String> {
 		private String method = "GET";
 		private List<NameValuePair> nvpList = new ArrayList<NameValuePair>();
-		
+
 		public HttpAsyncTaskXiangJi() {
 		}
 
@@ -375,21 +373,36 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 					String aqiDate = null;
 					if (!obj.isNull("reqTime")) {
 						aqiDate = obj.getString("reqTime");
+						if (!TextUtils.isEmpty(aqiDate)) {
+							try {
+								tvTime.setText("环境监测总站"+sdf4.format(sdf2.parse(aqiDate))+"更新");
+							} catch (ParseException e) {
+								e.printStackTrace();
+							}
+						}
 					}
-					
-					List<AqiDto> aqiList = new ArrayList<AqiDto>();
+
+					List<AqiDto> aqiList = new ArrayList<>();
 					if (!obj.isNull("series")) {
 						JSONArray array = obj.getJSONArray("series");
 						for (int i = 0; i < array.length(); i++) {
 							AqiDto dto = new AqiDto();
 							dto.aqi = String.valueOf(array.get(i));
-							if (!TextUtils.isEmpty(tvAqiCount.getText().toString()) && i == 0) {
-								dto.aqi = tvAqiCount.getText().toString();
-							}
 							aqiList.add(dto);
+
+							if (i == 0) {
+								String num = String.valueOf(array.get(i));
+								if (!TextUtils.isEmpty(num)) {
+									tvAqiCount.setText(num);
+									tvAqi.setText(WeatherUtil.getAqi(mContext, Integer.valueOf(num)));
+									tvAqi.setBackgroundResource(getCornerBackground(Integer.valueOf(num)));
+									tvPrompt.setText(getPrompt(Integer.valueOf(num)));
+								}
+							}
+
 						}
 					}
-					
+
 					if (aqiList.size() == 0) {
 						return;
 					}else {
@@ -403,7 +416,7 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 //								}
 //							}
 //							maxAqi = maxAqi + (50 - maxAqi%50);
-							
+
 							AqiQualityView aqiView = new AqiQualityView(mContext);
 							aqiView.setData(aqiList, aqiDate);
 							int viewHeight = (int)(CommonUtil.dip2px(mContext, 220));
@@ -453,13 +466,13 @@ public class QualityActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.llBack:
-			finish();
-			break;
+			case R.id.llBack:
+				finish();
+				break;
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
-	
+
 }
