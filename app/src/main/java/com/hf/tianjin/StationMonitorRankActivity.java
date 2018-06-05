@@ -210,7 +210,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 			}
 			tvArea.setText(getString(R.string.nation));
 			provinceName = "";
-			asynTask("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+endTime+"&endtime="+endTime+"&province="+provinceName+"&map=all&num=30");
+			asynTask("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+endTime+"&endtime="+endTime+"&province="+provinceName+"&map=all&num=30");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -857,7 +857,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+endTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+endTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -879,7 +879,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -908,7 +908,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -937,7 +937,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=rainfall&num=30", 1);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -967,7 +967,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -993,7 +993,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1026,7 +1026,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 21);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1056,7 +1056,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1082,7 +1082,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1115,7 +1115,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=temperature&num=30", 22);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1137,7 +1137,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=humidity&num=30", 3);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=humidity&num=30", 3);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1155,7 +1155,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=humidity&num=30", 3);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=humidity&num=30", 3);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1177,7 +1177,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=windspeed&num=30", 4);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=windspeed&num=30", 4);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1195,7 +1195,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=windspeed&num=30", 4);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=windspeed&num=30", 4);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1217,7 +1217,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=visibility&num=30", 5);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=visibility&num=30", 5);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1235,7 +1235,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=visibility&num=30", 5);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=visibility&num=30", 5);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1257,7 +1257,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=airpressure&num=30", 6);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=airpressure&num=30", 6);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1275,7 +1275,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, "")) {
 					tvArea.setText(getString(R.string.nation));
 				}
-				asynTaskSingle("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=airpressure&num=30", 6);
+				asynTaskSingle("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=airpressure&num=30", 6);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -1334,7 +1334,7 @@ public class StationMonitorRankActivity extends BaseActivity implements OnClickL
 				if (TextUtils.equals(provinceName, getString(R.string.nation))) {
 					provinceName = "";
 				}
-				asynTask("http://61.4.184.171:8080/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=all&num=30");
+				asynTask("http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime="+startTime+"&endtime="+endTime+"&province="+provinceName+"&map=all&num=30");
 				break;
 
 			default:

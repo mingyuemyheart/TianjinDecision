@@ -199,7 +199,7 @@ OnMapClickListener, OnGeocodeSearchListener, OnCameraChangeListener, OnMapScreen
 		aMap.setOnMapClickListener(this);
 		aMap.setOnCameraChangeListener(this);
 		
-		asyncGetMapUrl("http://61.4.184.171:8080/weather/rgwst/JsonCatalogue?map=china");//获取中国地区五中天气现象数据
+		asyncGetMapUrl("http://decision-171.tianqi.cn/weather/rgwst/JsonCatalogue?map=china");//获取中国地区五中天气现象数据
 	}
 	
 	/**
@@ -808,7 +808,7 @@ OnMapClickListener, OnGeocodeSearchListener, OnCameraChangeListener, OnMapScreen
 	 * @return
 	 */
 	private String getStationContentUrl(String stationIds) {
-		String URL = "http://61.4.184.171:8080/weather/rgwst/NewestData";
+		String URL = "http://decision-171.tianqi.cn/weather/rgwst/NewestData";
 		String sysdate = RainManager.getDate(Calendar.getInstance(), "yyyyMMddHHmmss");//系统时间
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(URL);

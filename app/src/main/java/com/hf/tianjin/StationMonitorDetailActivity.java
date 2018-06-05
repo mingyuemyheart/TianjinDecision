@@ -535,9 +535,9 @@ public class StationMonitorDetailActivity extends BaseActivity implements OnClic
 	 * @return
 	 */
 	private String getUrl(String stationids) {
-		String URL = "http://61.4.184.171:8080/weather/rgwst/OneDayStatistics";//
+		String URL = "http://decision-171.tianqi.cn/weather/rgwst/OneDayStatistics";//
 		if (!TextUtils.isEmpty(stationids) && stationids.length() == 5) {
-			URL = "http://61.4.184.171:8080/weather/rgwst/newOneDayStatistics";
+			URL = "http://decision-171.tianqi.cn/weather/rgwst/newOneDayStatistics";
 		}
 		String sysdate = RainManager.getDate(Calendar.getInstance(), "yyyyMMddHHmmss");//系统时间
 		StringBuffer buffer = new StringBuffer();
