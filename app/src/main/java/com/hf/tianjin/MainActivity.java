@@ -922,7 +922,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 								if (!TextUtils.isEmpty(cityId) && TextUtils.equals(cityId.substring(0, 5), CONST.TIANJINCITYID)) {
 									CONST.ISTIANJIN = true;
 									getWeatherInfo(cityId);
-									asyncQueryTianjin("http://211.99.240.5:8080/datafusion/GetRhdata?ID="+cityId, cityId);
+									asyncQueryTianjin("http://data-fusion.tianqi.cn/datafusion/GetRhdata?ID="+cityId, cityId);
 								}else {
 									CONST.ISTIANJIN = false;
 									getWeatherInfo(cityId);
