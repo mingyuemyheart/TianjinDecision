@@ -112,34 +112,12 @@ import okhttp3.Response;
 public class MainActivity extends BaseActivity implements OnClickListener, AMapLocationListener, ChartRainListener{
 
 	private Context mContext = null;
-	private ImageView ivMenu = null;
-	private ImageView ivShare = null;
+	private ImageView ivMenu,ivShare,ivEvent,ivWaitWind,ivPhe,ivPhe1;
 	private RelativeLayout reMain = null;
 	private ScrollView scrollView = null;
-	private TextView tvTitle = null;
-	private TextView tvTime1 = null;
-	private TextView tvTime2 = null;
-	private TextView tvTime3 = null;
-	private TextView tvTime4 = null;
-	private TextView tvTime5 = null;
-	private TextView tvQuality = null;
-	private TextView tvWarning = null;
-	private TextView tvRoute = null;
-	private TextView tvMonitor = null;
-	private ImageView ivEvent = null;
-	private ImageView ivWaitWind = null;
+	private TextView tvTitle,tvTime1,tvTime2,tvTime3, tvTime4, tvTime5,tvQuality,tvWarning,tvRoute,tvMonitor;
 	private LinearLayout llArea = null;
-	private TextView tvArea = null;
-	private ImageView ivPhe = null;
-	private TextView tvTemp = null;
-	private TextView tvPressre = null;
-	private TextView tvHumidity = null;
-	private TextView tvWind = null;
-	private TextView tvVisible = null;
-	private TextView tvDay1 = null;
-	private ImageView ivPhe1 = null;
-	private TextView tvHighTemp1 = null;
-	private TextView tvLowTemp1 = null;
+	private TextView tvArea,tvTemp,tvPressre,tvHumidity,tvWind,tvVisible,tvDay1,tvHighTemp1,tvLowTemp1;
 	private TextView tvPhe1 = null;
 	private TextView tvDay2 = null;
 	private ImageView ivPhe2 = null;
@@ -167,17 +145,17 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	private SimpleDateFormat sdf4 = new SimpleDateFormat("yyyy-MM-dd");
 	private int width = 0, height = 0;
 	private float density = 0;
-	private List<WarningDto> warningList = new ArrayList<WarningDto>();
+	private List<WarningDto> warningList = new ArrayList<>();
 	private long mExitTime;//记录点击完返回按钮后的long型时间
 	private MainViewPager viewPager;
-	private List<Fragment> fragments = new ArrayList<Fragment>();
+	private List<Fragment> fragments = new ArrayList<>();
 	private ImageView[] ivTips = null;//装载点的数组
 	private ViewGroup viewGroup = null;
 	private GridView aroundGridView = null;
 	private AroundWeatherAdapter aroundAdapter = null;
-	private List<WeatherDto> aroundList = new ArrayList<WeatherDto>();//周边天气
+	private List<WeatherDto> aroundList = new ArrayList<>();//周边天气
 	private ProgressBar progressBar = null;
-	private List<WeatherDto> aqiList = new ArrayList<WeatherDto>();//空气指数list
+	private List<WeatherDto> aqiList = new ArrayList<>();//空气指数list
 	private String locationCityId = null;//定位城市id
 	private String selectCityId = null;//listview选中城市
 	private String lat, lng;//选中城市对应的经纬度
@@ -204,7 +182,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	private ImageView ivAdd = null;//添加城市
 	private SwipeMenuListView cityListView = null;
 	private LeftAdapter leftAdapter = null;
-	private List<WarningDto> leftList = new ArrayList<WarningDto>();
+	private List<WarningDto> leftList = new ArrayList<>();
 	private int attentionCount = 10;//关注城市列表最大个数(包含定位城市一个)
 	private LinearLayout llAboutUs = null;
 	private LinearLayout llFeedBack = null;
@@ -793,11 +771,11 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 										long timestamp = new Date().getTime();
 										String start2 = sdf1.format(timestamp);
 										String end2 = sdf1.format(timestamp+1000*60*60*24*7);
-										asyncQueryAqi(XiangJiManager.getXJDayFore(longitude, latitude, start2, end2, timestamp), cityId);
-										OkHttpXiangJiAqi(latitude, longitude);
+                                        OkHttpAqi8(XiangJiManager.getXJDayFore(longitude, latitude, start2, end2, timestamp), cityId);
+                                        OkHttpAqiFact(latitude, longitude);
 
 										//获取分钟级预报信息
-										queryMinute(longitude, latitude);
+                                        OkHttpMinute(longitude, latitude);
 
 										//获取周边城市天气信息
 //		queryAroundWeathers(cityId);
@@ -826,9 +804,9 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	}
 
 	/**
-	 * 请求象辑aqi
+	 * aqi实况
 	 */
-	private void OkHttpXiangJiAqi(double lat, double lng) {
+	private void OkHttpAqiFact(double lat, double lng) {
 		Date date = new Date();
 		long timestamp = date.getTime();
 		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMddHH");
@@ -881,9 +859,9 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	}
 
 	/**
-	 * 异步请求七天aqi
+	 * aqi8天预报
 	 */
-	private void asyncQueryAqi(final String url, final String cityId) {
+	private void OkHttpAqi8(final String url, final String cityId) {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -922,7 +900,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 								if (!TextUtils.isEmpty(cityId) && TextUtils.equals(cityId.substring(0, 5), CONST.TIANJINCITYID)) {
 									CONST.ISTIANJIN = true;
 									getWeatherInfo(cityId);
-									asyncQueryTianjin("http://data-fusion.tianqi.cn/datafusion/GetRhdata?ID="+cityId, cityId);
+                                    OkHttpTianjin("http://data-fusion.tianqi.cn/datafusion/GetRhdata?ID="+cityId, cityId);
 								}else {
 									CONST.ISTIANJIN = false;
 									getWeatherInfo(cityId);
@@ -938,7 +916,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	/**
 	 * 请求天津预报数据
 	 */
-	private void asyncQueryTianjin(final String url, final String cityId) {
+	private void OkHttpTianjin(final String url, final String cityId) {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -962,7 +940,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 										JSONObject obj = new JSONObject(result);
 
 										//时间日期
-										List<WeatherDto> timeList = new ArrayList<WeatherDto>();
+										List<WeatherDto> timeList = new ArrayList<>();
 										timeList.clear();
 										if (!obj.isNull("t")) {
 											JSONArray array = obj.getJSONArray("t");
@@ -984,7 +962,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 											JSONObject f = obj.getJSONObject("f");
 											if (!f.isNull("f1")) {
 												JSONArray f1 = f.getJSONArray("f1");
-												List<WeatherDto> weeklyList = new ArrayList<WeatherDto>();
+												List<WeatherDto> weeklyList = new ArrayList<>();
 												for (int i = 0; i < f1.length(); i++) {
 													JSONObject weeklyObj = f1.getJSONObject(i);
 													WeatherDto dto = new WeatherDto();
@@ -1090,7 +1068,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 										//逐小时预报信息
 										if (!obj.isNull("jh")) {
 											JSONArray jh = obj.getJSONArray("jh");
-											List<WeatherDto> hourlyList = new ArrayList<WeatherDto>();
+											List<WeatherDto> hourlyList = new ArrayList<>();
 											for (int i = 0; i < jh.length(); i++) {
 												JSONObject itemObj = jh.getJSONObject(i);
 												WeatherDto dto = new WeatherDto();
@@ -1397,7 +1375,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 									JSONArray hourlyArray = content.getHourlyFineForecast2();
 									try {
 										int size = hourlyArray.length();
-										List<WeatherDto> hourlyList = new ArrayList<WeatherDto>();
+										List<WeatherDto> hourlyList = new ArrayList<>();
 										for (int i = 0; i < size; i++) {
 											JSONObject itemObj = hourlyArray.getJSONObject(i);
 											WeatherDto dto = new WeatherDto();
@@ -1455,14 +1433,14 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 			pro = cursor.getString(cursor.getColumnIndex("pro"));
 		}
 		if (!TextUtils.isEmpty(warningId)) {
-			asyncQueryWarning("http://decision.tianqi.cn/alarm12379/grepalarm2.php?areaid="+warningId.substring(0, 2), pro);
+			OkHttpWarning("http://decision.tianqi.cn/alarm12379/grepalarm2.php?areaid="+warningId.substring(0, 2), pro);
 		}
 	}
 
 	/**
 	 * 获取预警信息
 	 */
-	private void asyncQueryWarning(final String url, final String pro) {
+	private void OkHttpWarning(final String url, final String pro) {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -1548,7 +1526,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	 * @param lng
 	 * @param lat
 	 */
-	private void queryMinute(double lng, double lat) {
+	private void OkHttpMinute(double lng, double lat) {
 		final String url = "http://api.caiyunapp.com/v2/HyTVV5YAkoxlQ3Zd/"+lng+","+lat+"/forecast";
 		new Thread(new Runnable() {
 			@Override
@@ -2316,7 +2294,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, AMapL
 	private ChartRainThread mRadarThread = null;
 	private static final int HANDLER_SHOW_RADAR = 1;
 	private static final int HANDLER_PROGRESS = 2;
-	private List<ChartDto> chartList = new ArrayList<ChartDto>();
+	private List<ChartDto> chartList = new ArrayList<>();
 	private String eventName = "";
 	private String eventUrl = "";
 	/**
