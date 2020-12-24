@@ -4,6 +4,8 @@
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
         <option name="GRADLE_PROJECT_PATH" value=":app" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" />
+        <option name="LAST_KNOWN_AGP_VERSION" />
       </configuration>
     </facet>
     <facet type="android" name="Android">
@@ -104,31 +106,31 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/httpmime-4.1.3.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okhttp-3.8.1.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_Location_V2.4.0_20160308.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-core-ui-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-media-compat-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_QQZone_3.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_sms.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-v4-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-fragment-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_WeiXin_2.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_viewv6.0.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-core-utils-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_3DMap_V4.0.1_20160923.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-annotations:25.1.1@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_netv6.0.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-compat-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_apiv6.0.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengqq.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/MapApiServices.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okio-1.13.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-25.1.1" level="project" />
-    <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_netv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_sms.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-fragment-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okhttp-3.8.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengwx.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_3DMap_V4.0.1_20160923.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-media-compat-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:appcompat-v7-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-annotations:25.1.1@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-compat-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:animated-vector-drawable-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_umengqq.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_viewv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/okio-1.13.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/AMap_Location_V2.4.0_20160308.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/httpmime-4.1.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-core-ui-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_WeiXin_2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-v4-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/SocialSDK_QQZone_3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/MapApiServices.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-vector-drawable-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/umeng_social_apiv6.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.android.support:support-core-utils-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/shawn/AndroidStudioProjects/TianjinDecision/app/libs/ChinaWeatherAPI.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.apache.http.legacy-android-25" level="project" />
   </component>
 </module>

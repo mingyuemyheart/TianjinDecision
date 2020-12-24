@@ -651,7 +651,7 @@
                         <LinearLayout
                             android:id="@+id/llContainer1"
                             android:layout_width="wrap_content"
-                            android:layout_height="200dp"
+                            android:layout_height="300dp"
                             android:background="#30000000"
                             android:orientation="horizontal" >
                         </LinearLayout>
